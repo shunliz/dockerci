@@ -64,5 +64,5 @@ docker run \
 -e JENKINS_HOST=jenkins \
 -e GITWEB_TYPE=gitiles \
 --restart=unless-stopped \
--d ${GERRIT_IMAGE_NAME}
+-it -d ${GERRIT_IMAGE_NAME}
 
