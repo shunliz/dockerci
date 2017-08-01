@@ -1,0 +1,15 @@
+dn: uid=steven2,ou=accounts,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+homeDirectory: /home/steven2
+loginShell: /bin/false
+gidNumber: 10000
+uid: steven2
+cn: steven2 user
+displayName: user steven2
+uidNumber: 10000
+sn: steven2
+givenName: steven2
+mail: steven2@example.com

@@ -1,0 +1,28 @@
+#!/bin/bash
+## Hostname, IP or FQDN.
+HOST_NAME=192.168.8.79
+
+## LDAP server configuration
+## Comment these variables out if you already have a running ldap server.
+## If SLAPD_DOMAIN and SLAPD_PASSWORD is set,
+## LDAP_SERVER and LDAP_ACCOUNTBASE will be overwritten automatically.
+SLAPD_DOMAIN=example.com
+SLAPD_PASSWORD=secret
+
+## LDAP_SERVER and LDAP_ACCOUNTBASE become unnecessary
+## if SLAPD_DOMAIN and SLAPD_PASSWORD are specified.
+## LDAP Server IP or FQDN.
+LDAP_SERVER=ldap://192.168.8.79
+## LDAP account baseDN
+LDAP_ACCOUNTBASE=ou=accounts,dc=example,dc=com
+
+## Gerrit administrator's uid in LDAP
+GERRIT_ADMIN_UID=admin
+GERRIT_ADMIN_PWD=passwd
+GERRIT_ADMIN_EMAIL=admin@${SLAPD_DOMAIN}
+
+## A Nexus server will be started by default.
+## Specify this variable only if you want to use
+## an existing nexus server instead.
+## Jenkins uses NEXUS_WEBURL to setup maven repository mirror.
+#NEXUS_WEBURL=http://127.0.0.1/nexus
