@@ -40,7 +40,7 @@ echo "Nexus is ready"
 ~/ci/setupContainer.sh ${SUFFIX}
 #sleep 10
 echo ">>>> Start import demo projects"
-~/ci/importDemoProject.sh ${SUFFIX}
-~/ci/importDockerProject.sh ${SUFFIX}
+#~/ci/importDemoProject.sh ${SUFFIX}
+#~/ci/importDockerProject.sh ${SUFFIX}
 
 echo ">>>> Everything is ready."

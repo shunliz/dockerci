@@ -57,13 +57,14 @@ REDMINE_VOLUME=redmine-volume${SUFFIX}
 PG_REDMINE_NAME=pg-redmine${SUFFIX}
 
 ## Redmine docker image's name
-REDMINE_IMAGE_NAME=${REDMINE_IMAGE_NAME:-sameersbn/redmine}
+REDMINE_IMAGE_NAME=${REDMINE_IMAGE_NAME:-sameersbn/redmine:nodel}
 
 ## Nginx docker container's name
 NGINX_NAME=proxy
 
 ## Nginx docker image's name
-NGINX_IMAGE_NAME=${NGINX_IMAGE_NAME:-openfrontier/nginx}
+# Fixme: remove noredmine tag when redmine can come up
+NGINX_IMAGE_NAME=${NGINX_IMAGE_NAME:-openfrontier/nginx:noredmine}
 
 ## Nginx file upload limit.
 NGINX_MAX_UPLOAD_SIZE=${NGINX_MAX_UPLOAD_SIZE:-200m}

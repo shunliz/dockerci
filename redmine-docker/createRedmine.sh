@@ -64,4 +64,4 @@ docker run \
 --volume redmine-data-volume:/home/redmine/data \
 --volume ${GERRIT_VOLUME}:/var/gerrit/review_site:ro \
 --restart=unless-stopped \
--d ${REDMINE_IMAGE_NAME}
+-it -d ${REDMINE_IMAGE_NAME}

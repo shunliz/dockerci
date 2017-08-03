@@ -12,7 +12,7 @@ ENV GERRIT_INIT_ARGS ""
 
 # Add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 # Need the user bash to config the replication
-RUN adduser -D -h "${GERRIT_HOME}" -g "Gerrit User" -s /bin/bash "${GERRIT_USER}"
+RUN adduser -D -h "${GERRIT_HOME}" -g "Gerrit User" -s /bin/sh "${GERRIT_USER}"
 
 RUN set -x \
     && apk add --update --no-cache git openssh openssl bash perl perl-cgi git-gitweb curl su-exec
