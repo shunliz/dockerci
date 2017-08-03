@@ -64,7 +64,7 @@ NGINX_NAME=proxy
 
 ## Nginx docker image's name
 # Fixme: remove noredmine tag when redmine can come up
-NGINX_IMAGE_NAME=${NGINX_IMAGE_NAME:-openfrontier/nginx:noredmine}
+NGINX_IMAGE_NAME=${NGINX_IMAGE_NAME:-openfrontier/nginx:latest}
 
 ## Nginx file upload limit.
 NGINX_MAX_UPLOAD_SIZE=${NGINX_MAX_UPLOAD_SIZE:-200m}
