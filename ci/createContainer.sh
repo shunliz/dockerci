@@ -26,6 +26,9 @@ source ~/openldap-docker/createOpenSSP.sh
 # Create Gerrit server container.
 source ~/gerrit-docker/createGerrit.sh
 
+# Create gitlab server container.
+source ~/gitlab-docker/create-gitlab.sh
+
 # Create Jenkins server container.
 source ~/jenkins-docker/createJenkins.sh
 
