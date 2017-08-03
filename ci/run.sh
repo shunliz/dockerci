@@ -24,11 +24,11 @@ while [ -z "$(docker logs ${NGINX_NAME} 2>&1 | grep "jenkins ready")" ]; do
 done
 echo "Jenkins is ready"
 
-#while [ -z "$(docker logs ${NGINX_NAME} 2>&1 | grep "redmine ready")" ]; do
-#    echo "Waiting redmine ready."
-#    sleep 1
-#done
-#echo "Redmine is ready"
+while [ -z "$(docker logs ${NGINX_NAME} 2>&1 | grep "redmine ready")" ]; do
+    echo "Waiting redmine ready."
+    sleep 1
+done
+echo "Redmine is ready"
 
 while [ -z "$(docker logs ${NGINX_NAME} 2>&1 | grep "nexus ready")" ]; do
     echo "Waiting nexus ready."
@@ -39,7 +39,7 @@ echo "Nexus is ready"
 #sleep 5
 ~/ci/setupContainer.sh ${SUFFIX}
 #sleep 10
-echo ">>>> Start import demo projects"
+#echo ">>>> Start import demo projects"
 #~/ci/importDemoProject.sh ${SUFFIX}
 #~/ci/importDockerProject.sh ${SUFFIX}
 
