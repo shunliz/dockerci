@@ -36,11 +36,11 @@ while [ -z "$(docker logs ${NGINX_NAME} 2>&1 | grep "nexus ready")" ]; do
 done
 echo "Nexus is ready"
 
-#sleep 5
+sleep 5
 ~/ci/setupContainer.sh ${SUFFIX}
-#sleep 10
-#echo ">>>> Start import demo projects"
-#~/ci/importDemoProject.sh ${SUFFIX}
-#~/ci/importDockerProject.sh ${SUFFIX}
+sleep 10
+echo ">>>> Start import demo projects"
+~/ci/importDemoProject.sh ${SUFFIX}
+~/ci/importDockerProject.sh ${SUFFIX}
 
 echo ">>>> Everything is ready."
