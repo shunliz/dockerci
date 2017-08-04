@@ -1,0 +1,15 @@
+dn: uid=gerrit2,ou=accounts,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+homeDirectory: /var/gerrit
+loginShell: /bin/sh
+gidNumber: 10000
+uid: gerrit2
+cn: gerrit2
+displayName: user gerrit2
+uidNumber: 10000
+sn: gerrit2
+givenName: gerrit2
+mail: gerrit2@example.com
