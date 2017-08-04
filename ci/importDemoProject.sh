@@ -16,6 +16,7 @@ curl --request PUT --user "${GERRIT_ADMIN_UID}:${GERRIT_ADMIN_PWD}" -d@- --heade
 rm -rf ~/ci/demo
 mkdir ~/ci/demo
 git init ~/ci/demo
+
 cd ~/ci/demo
 
 #start ssh agent and add ssh key
