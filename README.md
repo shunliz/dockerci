@@ -73,6 +73,19 @@ docker exec 41e2016aa2650e135d25 sed -i 42,48d /etc/nginx/conf.d/default.conf
 
 docker exec 9304656e15fd ssh-keygen -q -t rsa -N "" -f /root/.ssh/id_rsa
 
+# Import project
+The demo project imported in shell, need to log into gerrit container and remove the demo and demo-docker and
+
+git clone --bare ssh://git@192.168.8.80:8022/shunliz/demo.git
+git clone --bare ssh://git@192.168.8.80:8022/shunliz/demo-docker.git
+to reimport. Fix this later
+
+
+#Jekins configure
+
+1, No swarm configure need to remove the swarm label from the job configure.
+2, in the global tool configure, add a maven which install from apache as there is no maven installed in jekins image.
+
 
 # Finally succeed to configure gerrit replication
 
